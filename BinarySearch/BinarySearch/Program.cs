@@ -12,22 +12,22 @@ namespace BinarySearch
     private static int? BinarrySearch(int [] arr, int x)
     {
 
-      // Проверить, имеет ли смыл вообще выполнять поиск:
-      // - если длина массива равна нулю - искать нечего;
-      // - если искомый элемент меньше первого элемента массива, значит, его в массиве нет;
-      // - если искомый элемент больше последнего элемента массива, значит, его в массиве нет.
-      // есть ли смысл вообще выполнять поиск
+      // Check to see if the smylie ever performs a search:
+      // - if the length of the array is zero, there is nothing to look for;
+      // - if the required element is smaller than the first element of the array, then it is not in the array;
+      // - if the required element is greater than the last element of the array, then it is not in the array.
+      // is there any sense in doing a search
       if ((arr.Length == 0) || (x < arr[0]) || (x > arr[arr.Length - 1])) return null;
 
-      int first = 0;//Начало массива
-      int last = arr.Length;//Конец массива
+      int first = 0;//Start of Array
+      int last = arr.Length;//End of Array
       
 
-      while (first < last)//запускаем цикл если первое число меньше последнего
+      while (first < last)//run the loop if the first number is less than the last
       {
-        int mid = first + (last - first) / 2;//ищем в какой стороне массива находиться число
+        int mid = first + (last - first) / 2;//we look in what side of the array there is a number
 
-        if (x <= arr[mid])// Если x <= среднему чилсу
+        if (x <= arr[mid])
         {
           last = mid;
         }
@@ -45,20 +45,20 @@ namespace BinarySearch
     }
     static void Main(string[] args)
     {
-      //Для бинарного поиска должен быть отсортированный массив
+      //For a binary search, there must be a sorted array
 
-      int[] a = { 1, 3, 5, 7, 9, 20, 8 };// неотсортированный массив
-      //Проходим сортировку пузырьком
+      int[] a = { 1, 3, 5, 7, 9, 20, 8 };// unsorted array
+      //We pass the sorting by a bubble
 
       for (int i = 0; i < a.Length; i++)
       {
-        for (int j = i+1; j < a.Length; j++)// j = следующий элемент в массиве
+        for (int j = i+1; j < a.Length; j++)//  j = the next element in the array
         {
-          if (a[i] > a[j])// если первый елемент больше следующего
+          if (a[i] > a[j])// if the first element is greater than the next
           {
-            int temp = a[i];// записываем значение
-            a[i] = a[j];//меняем больший елемент на меньший
-            a[j] = temp;//перезаписываем значение
+            int temp = a[i];// write the value
+            a[i] = a[j];//change the larger element to a smaller one
+            a[j] = temp;//overwrite the value
           }
         }
       }
