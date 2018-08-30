@@ -64,11 +64,11 @@ namespace BinarySearch
       }
 
 
-      Console.WriteLine("»щем -1: {0}", BinarrySearch(a, -1));
-      Console.WriteLine("»щем  3: {0}", BinarrySearch(a, 3));
-      Console.WriteLine("»щем  6: {0}", BinarrySearch(a, 6));
-      Console.WriteLine("»щем  9: {0}", BinarrySearch(a, 9));
-      Console.WriteLine("»щем 20: {0}", BinarrySearch(a, 20));
+      Console.WriteLine("Searching -1: {0}", BinarrySearch(a, -1));
+      Console.WriteLine("Searching  3: {0}", BinarrySearch(a, 3));
+      Console.WriteLine("Searching  6: {0}", BinarrySearch(a, 6));
+      Console.WriteLine("Searching  9: {0}", BinarrySearch(a, 9));
+      Console.WriteLine("Searching 20: {0}", BinarrySearch(a, 20));
       Console.ReadLine();
 
     }
