@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFS", "DFS\DFS.csproj", "{372D7F66-2945-48B3-BA53-CDC9D490119B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{372D7F66-2945-48B3-BA53-CDC9D490119B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372D7F66-2945-48B3-BA53-CDC9D490119B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372D7F66-2945-48B3-BA53-CDC9D490119B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372D7F66-2945-48B3-BA53-CDC9D490119B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0333F8DC-0607-44CA-955E-B39DDF9A81DE}
+	EndGlobalSection
+EndGlobal
