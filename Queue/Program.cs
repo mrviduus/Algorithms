@@ -8,7 +8,7 @@ class Program
 
         queue.Enqueue("Hello");
         queue.Enqueue("world");
-
+ 
         System.Console.WriteLine(queue.Peek());
         System.Console.WriteLine(queue.Dequeue());
         System.Console.WriteLine(queue.Dequeue());
