@@ -19,7 +19,10 @@ class Program
         System.Console.WriteLine(instanse.Contains(7));//true
         System.Console.WriteLine(instanse.Contains(100));//false
 
-        //instanse.InOrderTraversal(); //3 5 7 8 12 10 15
+        instanse.Remove(12);
+        instanse.Remove(5);
+
+        instanse.InOrderTraversal(); //3 5 7 8 12 10 15
         //instanse.PostOrderTraversal(); //3 7 5 10 15 12 8
         //instanse.PreOrderTraversal(); //8 5 3 7 12 10 15
 

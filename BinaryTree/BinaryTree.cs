@@ -154,6 +154,104 @@ class BinaryTree<T> : IEnumerable<T> where T : IComparable<T>
         }
     }
 
+    public bool Remove(T value)
+    {
+        BinaryTreeNode<T> current;
+        BinaryTreeNode<T> parent;
+
+        current = FindWithParent(value, out parent);
+
+        if(current is null)
+        {
+            return false;
+        }
+
+        count --;
+
+        // node has not right child
+        if(current.Right is null)
+        {
+            //remove root
+            if(parent is null)
+            {
+                root = current.Left;
+            }
+            else
+            {
+                int result = parent.CompareTo(current.Value);
+
+                if(result > 0)
+                {
+                    parent.Right = current.Left;
+                }
+                else if(result < 0)
+                {
+                    parent.Right = current.Left;
+                }
+
+            }
+
+        }
+        else if(current.Right.Left is null)
+        {
+            current.Right.Left = current.Left;
+
+            if(parent is null)
+            {
+                root = current.Right;
+            }
+            else
+            {
+                int result = parent.CompareTo(current.Value);
+
+                if(result > 0)
+                {
+                    parent.Left = current.Right;
+                }
+                else if(result < 0)
+                {
+                    parent.Right = current.Right;
+                }
+            }
+        }
+        else
+        {
+            BinaryTreeNode<T> leftmost = current.Right.Left;
+            BinaryTreeNode<T> leftmostParent = current.Right;
+
+            while(leftmost.Left is not null)
+            {
+                leftmostParent = leftmost;
+                leftmost = leftmost.Left;
+            }
+
+            leftmostParent.Left = leftmost.Right;
+
+            leftmost.Left = current.Left;
+            leftmost.Right = current.Right;
+
+            if(parent is null)
+            {
+                root = leftmost;
+            }
+            else
+            {
+                int result = parent.CompareTo(current.Value);
+
+                if(result > 0)
+                {
+                    parent.Left = leftmost;
+                }
+                else if(result < 0)
+                {
+                    parent.Right = leftmost;
+                }
+            }
+        }
+        
+        return true;
+    }
+
 
     public int Count {get{return count;}}
 
