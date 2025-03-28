@@ -103,6 +103,20 @@ class SinglyLinkedList{
     this.lenght --;
     return removed;
   }
+  reverse(){
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    var next;
+    var prev = null;
+    for(var i = 0; i < this.lenght; i++){
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
  
 
@@ -121,6 +135,10 @@ console.log(list.get(0));
 list.set(0, "set");
 console.log(list);
 list.insert(0,"first");
+console.log(list);
+list.remove(0);
+console.log(list);
+list.reverse();
 console.log(list);
 
 
